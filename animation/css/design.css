@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3B44A2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.cloud{
+    width: 100%;
+    opacity: 0.8;
+    position: absolute;
+    right: -100%;
+    animation: cloud 20s linear infinite;
+}
+
+@keyframes cloud {
+    from{
+        right: -100%;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.sun{
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    animation: sun 20s linear infinite;
+
+}
+
+@keyframes sun{
+    0%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0.5;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.bird{
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: bird 13s linear infinite
+    ;
+}
+
+@keyframes bird{
+    0%{
+     bottom: 0;
+    right: 0;
+
+    }
+    60%{
+     bottom: 80%;
+     right: 60%;
+     opacity: 0.8;
+    }
+
+    100%{
+        bottom: 0;
+        right: 80%;
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+/*.ship{
+    width: 20%;
+    position: absolute;
+    bottom: -3%;
+    right: 0;
+    animation: ship 15s linear 1;
+    opacity: 1;
+}
+
+@keyframes ship{
+    0%{
+        bottom: -3%;
+        right: 0;
+        opacity: 1;
+    }
+    80%{
+        bottom: -3%;
+        right: 70%;
+        opacity: 0;
+    }
+}
